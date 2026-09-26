@@ -1,4 +1,4 @@
-name: Gerar aplicativo iOS
+name: Gerar IPA
 
 on:
   workflow_dispatch:
@@ -8,7 +8,7 @@ jobs:
     runs-on: macos-latest
 
     steps:
-      - name: Baixar código
+      - name: Baixar codigo
         uses: actions/checkout@v4
 
       - name: Instalar XcodeGen
@@ -17,7 +17,7 @@ jobs:
       - name: Gerar projeto Xcode
         run: xcodegen generate
 
-      - name: Compilar aplicativo
+      - name: Compilar para iPhone
         run: |
           xcodebuild \
             -project ProxyKeyApp.xcodeproj \
@@ -28,13 +28,13 @@ jobs:
             CODE_SIGNING_ALLOWED=NO \
             CODE_SIGNING_REQUIRED=NO
 
-      - name: Compactar aplicativo
+      - name: Criar IPA
         run: |
           mkdir -p Payload
           cp -R build/Build/Products/Release-iphoneos/ProxyKeyApp.app Payload/
           zip -r ProxyKeyApp-unsigned.ipa Payload
 
-      - name: Enviar IPA como artefato
+      - name: Enviar IPA
         uses: actions/upload-artifact@v4
         with:
           name: ProxyKeyApp-IPA
