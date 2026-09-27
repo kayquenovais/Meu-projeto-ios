@@ -17,7 +17,7 @@ workflows:
         script: |
           xcodebuild \
             -project "$CM_BUILD_DIR/projeto.xcodeproj" \
-            -scheme "ProxyKeyApp" \
+            -target "ProxyKeyApp" \
             -configuration Debug \
             -destination 'generic/platform=iOS' \
             CODE_SIGNING_ALLOWED=NO \
