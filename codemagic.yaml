@@ -13,12 +13,12 @@ workflows:
           xcodebuild -list \
             -project "$CM_BUILD_DIR/projeto.xcodeproj"
 
-      - name: Compilar aplicativo iOS
-        script: |
-          xcodebuild \
-            -project "$CM_BUILD_DIR/projeto.xcodeproj" \
-            -target "ProxyKeyApp" \
-            -configuration Debug \
+      - name: Gerar IPA
+          script: |
+              xcode-project build-ipa --project "$CM_BUILD_DIR/projeto.xcodeproj" --scheme "ProxyKeyApp"
+            
+            artifacts:
+             - build/ios/ipa/*.ipa
             -destination 'generic/platform=iOS' \
             CODE_SIGNING_ALLOWED=NO \
             build
