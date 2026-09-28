@@ -18,10 +18,10 @@ workflows:
               xcode-project build-ipa --project "$CM_BUILD_DIR/projeto.xcodeproj" --scheme "ProxyKeyApp"
             
             artifacts:
-             - build/ios/ipa/*.ipa
-            -destination 'generic/platform=iOS' \
-            CODE_SIGNING_ALLOWED=NO \
-            build
+               - build/ios/ipa/*.ipa
+            
+            
+            
 
     artifacts:
       - $HOME/Library/Developer/Xcode/DerivedData/**/Build/**/*.app
