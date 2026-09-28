@@ -61,8 +61,8 @@ A10000000000000000000060 = {isa = PBXResourcesBuildPhase; buildActionMask = 2147
 /* End PBXResourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-A10000000000000000000080 = {isa = XCBuildConfiguration; buildSettings = { PRODUCT_BUNDLE_IDENTIFIER = "com.proxy.system"; SWIFT_VERSION = 5.0; IPHONEOS_DEPLOYMENT_TARGET = 16.0; TARGETED_DEVICE_FAMILY = "1,2"; }; name = Debug; };
-A10000000000000000000081 = {isa = XCBuildConfiguration; buildSettings = { PRODUCT_BUNDLE_IDENTIFIER = "com.proxy.system"; SWIFT_VERSION = 5.0; IPHONEOS_DEPLOYMENT_TARGET = 16.0; TARGETED_DEVICE_FAMILY = "1,2"; }; name = Release; };
+A10000000000000000000080 = {isa = XCBuildConfiguration; buildSettings = { PRODUCT_NAME = "ProxyKeyApp"; INFOPLIST_FILE = "Info.plist"; PRODUCT_BUNDLE_IDENTIFIER = "com.proxy.system"; SWIFT_VERSION = 5.0; IPHONEOS_DEPLOYMENT_TARGET = 16.0; TARGETED_DEVICE_FAMILY = "1,2"; }; name = Debug; };
+A10000000000000000000081 = {isa = XCBuildConfiguration; buildSettings = { PRODUCT_NAME = "ProxyKeyApp"; INFOPLIST_FILE = "Info.plist"; PRODUCT_BUNDLE_IDENTIFIER = "com.proxy.system"; SWIFT_VERSION = 5.0; IPHONEOS_DEPLOYMENT_TARGET = 16.0; TARGETED_DEVICE_FAMILY = "1,2"; }; name = Release; };
 A10000000000000000000082 = {isa = XCBuildConfiguration; buildSettings = { SDKROOT = iphoneos; }; name = Debug; };
 A10000000000000000000083 = {isa = XCBuildConfiguration; buildSettings = { SDKROOT = iphoneos; }; name = Release; };
 /* End XCBuildConfiguration section */
