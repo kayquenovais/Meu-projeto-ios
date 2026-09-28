@@ -14,15 +14,11 @@ workflows:
             -project "$CM_BUILD_DIR/projeto.xcodeproj"
 
       - name: Gerar IPA
-          script: |
-              xcode-project build-ipa --project "$CM_BUILD_DIR/projeto.xcodeproj" --scheme "ProxyKeyApp"
-            
-            
-               
-            
-            
-            
+        script: |
+          xcode-project build-ipa \
+            --project "$CM_BUILD_DIR/projeto.xcodeproj" \
+            --scheme "ProxyKeyApp"
 
     artifacts:
-        - build/ios/ipa/*.ipa
+      - build/ios/ipa/*.ipa
       - /tmp/xcodebuild_logs/*.log
