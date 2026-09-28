@@ -17,12 +17,12 @@ workflows:
           script: |
               xcode-project build-ipa --project "$CM_BUILD_DIR/projeto.xcodeproj" --scheme "ProxyKeyApp"
             
-            artifacts:
-               - build/ios/ipa/*.ipa
+            
+               
             
             
             
 
     artifacts:
-      - $HOME/Library/Developer/Xcode/DerivedData/**/Build/**/*.app
+        - build/ios/ipa/*.ipa
       - /tmp/xcodebuild_logs/*.log
